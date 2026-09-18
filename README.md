@@ -17,6 +17,7 @@ Public marketing site for **TriOS** — iron-distance triathlon training softwar
 | `/features` | Capability cards |
 | `/how-it-works` | Closed loop (import → understand → plan → execute → learn) |
 | `/early-access` | Early-access waitlist signup |
+| `/faq` | FAQ — early-access honest answers |
 | `/changelog` | Starter changelog (early alpha) |
 | `/about` | About TriOS |
 | `/privacy` | Privacy placeholder |

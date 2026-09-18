@@ -5,6 +5,7 @@ const APP_URL = "https://race-ops-staging-eosin.vercel.app";
 const productLinks = [
   { href: "/features", label: "Features" },
   { href: "/how-it-works", label: "How it works" },
+  { href: "/faq", label: "FAQ" },
   { href: "/early-access", label: "Early access" },
   { href: "/changelog", label: "Changelog" },
 ];
