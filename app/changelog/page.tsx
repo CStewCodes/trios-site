@@ -5,11 +5,31 @@ export const metadata: Metadata = {
   description: "TriOS product changelog — early alpha notes.",
 };
 
-const entries = [
+type ChangelogEntry = {
+  date: string;
+  title: string;
+  body: string;
+  bullets?: string[];
+  tag: string;
+};
+
+const entries: ChangelogEntry[] = [
+  {
+    date: "2026-09-18",
+    title: "Early-access waitlist on the marketing site",
+    body: "Athletes can join the TriOS early-access waitlist from the marketing site. Still early alpha — expect rough edges while we iterate.",
+    bullets: [
+      "Waitlist form on /early-access (email required, optional name) writes to Neon",
+      "Confirmation email via Resend after a successful new signup (duplicates do not re-send)",
+      "Primary site CTAs now point to Join waitlist (/early-access); staging remains a secondary link",
+      "Clearer on-page success and duplicate confirmation UI after submit",
+    ],
+    tag: "Site",
+  },
   {
     date: "2026-09-17",
     title: "Marketing site scaffold",
-    body: "Public TriOS marketing pages live: home, features, how-it-works, early access, changelog, about, privacy, terms, and support. Primary CTA points to the staging app.",
+    body: "Public TriOS marketing pages live: home, features, how-it-works, early access, changelog, about, privacy, terms, and support. Initial primary CTA pointed at the staging app (later moved to the waitlist).",
     tag: "Site",
   },
   {
@@ -47,6 +67,13 @@ export default function ChangelogPage() {
             </div>
             <h2 className="mt-2 text-xl font-semibold">{entry.title}</h2>
             <p className="mt-2 text-sm text-muted">{entry.body}</p>
+            {entry.bullets && entry.bullets.length > 0 ? (
+              <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm text-muted">
+                {entry.bullets.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : null}
           </article>
         ))}
       </div>
