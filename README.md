@@ -6,6 +6,7 @@ Public marketing site for **TriOS** — iron-distance triathlon training softwar
 
 - Next.js (App Router) + TypeScript + Tailwind CSS
 - Vercel-ready (`npm run build`)
+- Neon Postgres for early-access waitlist (`@neondatabase/serverless`)
 
 ## Routes
 
@@ -14,7 +15,7 @@ Public marketing site for **TriOS** — iron-distance triathlon training softwar
 | `/` | Home — hero + morning brief promise |
 | `/features` | Capability cards |
 | `/how-it-works` | Closed loop (import → understand → plan → execute → learn) |
-| `/early-access` | Early access / pricing placeholder |
+| `/early-access` | Early-access waitlist signup |
 | `/changelog` | Starter changelog (early alpha) |
 | `/about` | About TriOS |
 | `/privacy` | Privacy placeholder |
@@ -23,10 +24,21 @@ Public marketing site for **TriOS** — iron-distance triathlon training softwar
 
 Primary CTA → [TriOS app (staging)](https://race-ops-staging-eosin.vercel.app)
 
+## Environment variables
+
+Copy `.env.example` to `.env.local` for local development. **Never commit secrets.**
+
+| Variable | Required | Notes |
+|----------|----------|--------|
+| `DATABASE_URL` | Yes (for waitlist) | Neon connection string for project **`trios-site-waitlist`**. Server-only. Set the same value in Vercel project env for production/preview. |
+
+The waitlist writes to table `waitlist_signups` (email unique, optional name, source default `early-access`).
+
 ## Local development
 
 ```bash
 npm install
+cp .env.example .env.local   # then set DATABASE_URL from Neon
 npm run dev
 ```
 
@@ -38,4 +50,5 @@ npm run build
 
 - Brand is **TriOS** (not TriPilot).
 - No GitHub Actions workflows in this repo.
+- Waitlist only on `/early-access` — no payment/checkout in this marketing site yet. Pricing comes later.
 - Conservative feature claims; device integrations called out as roadmap/planned when mentioned.
