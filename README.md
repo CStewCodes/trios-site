@@ -7,6 +7,7 @@ Public marketing site for **TriOS** — iron-distance triathlon training softwar
 - Next.js (App Router) + TypeScript + Tailwind CSS
 - Vercel-ready (`npm run build`)
 - Neon Postgres for early-access waitlist (`@neondatabase/serverless`)
+- Resend for waitlist confirmation email (`resend`)
 
 ## Routes
 
@@ -31,8 +32,10 @@ Copy `.env.example` to `.env.local` for local development. **Never commit secret
 | Variable | Required | Notes |
 |----------|----------|--------|
 | `DATABASE_URL` | Yes (for waitlist) | Neon connection string for project **`trios-site-waitlist`**. Server-only. Set the same value in Vercel project env for production/preview. |
+| `RESEND_API_KEY` | Recommended | Resend API key (server-only). Used to send one confirmation email after a **new** waitlist signup. If missing, signup still succeeds and send is skipped (logged). |
+| `RESEND_FROM` | Optional | From address. Defaults to `TriOS <onboarding@resend.dev>` until a custom domain is verified in Resend. |
 
-The waitlist writes to table `waitlist_signups` (email unique, optional name, source default `early-access`).
+The waitlist writes to table `waitlist_signups` (email unique, optional name, source default `early-access`). Duplicate signups do not send another confirmation email. Email failures never roll back a successful insert.
 
 ## Local development
 

@@ -85,7 +85,7 @@ export default function WaitlistForm() {
           state.status === "idle"
             ? "sr-only"
             : isOk
-              ? "bg-accent-soft text-foreground"
+              ? "border border-accent/30 bg-accent-soft text-foreground font-medium"
               : "border border-red-200 bg-red-50 text-red-900"
         }`}
       >
