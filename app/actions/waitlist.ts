@@ -1,6 +1,7 @@
 "use server";
 
 import { getSql } from "@/lib/db";
+import { sendWaitlistConfirmation } from "@/lib/email";
 
 export type WaitlistState = {
   status: "idle" | "success" | "duplicate" | "error";
@@ -42,10 +43,15 @@ export async function joinWaitlist(
       INSERT INTO waitlist_signups (email, name, source)
       VALUES (${email}, ${name}, 'early-access')
     `;
+
+    // Confirmation email is best-effort — never roll back a successful insert.
+    // Duplicates never reach this path (unique constraint → catch below).
+    await sendWaitlistConfirmation({ to: email, name });
+
     return {
       status: "success",
       message:
-        "You're on the TriOS waitlist. We'll email you about early access and product updates — nothing more.",
+        "You're on the TriOS waitlist. Check your inbox for a confirmation — we'll email you when early access opens further.",
     };
   } catch (err: unknown) {
     const code =
@@ -57,7 +63,7 @@ export async function joinWaitlist(
         ? String((err as { message: unknown }).message)
         : "";
 
-    // Postgres unique_violation
+    // Postgres unique_violation — no second welcome email
     if (code === "23505" || /duplicate|unique/i.test(msg)) {
       return {
         status: "duplicate",
