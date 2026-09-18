@@ -55,14 +55,12 @@ export default function HomePage() {
             so you can train with intent instead of guessing.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href={APP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/early-access"
               className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white hover:bg-accent-hover"
             >
-              Open TriOS app (staging)
-            </a>
+              Join waitlist
+            </Link>
             <Link
               href="/how-it-works"
               className="rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-white hover:border-slate-400"
@@ -71,7 +69,16 @@ export default function HomePage() {
             </Link>
           </div>
           <p className="mt-4 text-xs text-slate-400">
-            Staging app link until the production domain is live. Alpha software — expect rough edges.
+            Early alpha.{" "}
+            <a
+              href={APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-slate-500 underline-offset-2 hover:text-slate-200"
+            >
+              Open TriOS app (staging)
+            </a>{" "}
+            until the production domain is live.
           </p>
         </div>
       </section>
@@ -200,24 +207,25 @@ export default function HomePage() {
             <h2 className="text-xl font-semibold">Built for athletes chasing 140.6</h2>
             <p className="mt-2 max-w-xl text-sm text-muted">
               TriOS is in early access. We’re shipping carefully, keeping claims conservative, and
-              prioritizing the iron-distance loop first. Try the staging app or request an invite.
+              prioritizing the iron-distance loop first. Join the waitlist — staging stays available
+              as a secondary link.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
+            <Link
+              href="/early-access"
+              className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover"
+            >
+              Join waitlist
+            </Link>
             <a
               href={APP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover"
+              className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent/50"
             >
               Open TriOS app (staging)
             </a>
-            <Link
-              href="/early-access"
-              className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-foreground hover:border-accent/50"
-            >
-              Request early access
-            </Link>
           </div>
         </div>
       </section>

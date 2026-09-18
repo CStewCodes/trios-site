@@ -9,8 +9,6 @@ const navLinks = [
   { href: "/support", label: "Support" },
 ];
 
-const APP_URL = "https://race-ops-staging-eosin.vercel.app";
-
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-card/90 backdrop-blur-md">
@@ -34,14 +32,12 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
-          href={APP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/early-access"
           className="rounded-full bg-accent px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-accent-hover"
         >
-          Open app (staging)
-        </a>
+          Join waitlist
+        </Link>
       </div>
 
       <nav
