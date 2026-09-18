@@ -16,6 +16,18 @@ type ChangelogEntry = {
 const entries: ChangelogEntry[] = [
   {
     date: "2026-09-18",
+    title: "FAQ, credibility, Support, and How it works",
+    body: "More complete early-alpha marketing IA — still honest, still no fake metrics. Brand TriOS only.",
+    bullets: [
+      "FAQ page (/faq) with nav links — waitlist, proposal-based plan changes, integrations as roadmap/planned",
+      "Home credibility strip — early alpha + waitlist, iron-distance first, you approve plan changes (no fake testimonials)",
+      "Support completeness — primary Join waitlist CTA, FAQ/changelog self-serve, honest contact (no production inbox claim)",
+      "How it works deepen — richer closed-loop detail plus a clear proposal-until-approve gate",
+    ],
+    tag: "Site",
+  },
+  {
+    date: "2026-09-18",
     title: "Early-access waitlist on the marketing site",
     body: "Athletes can join the TriOS early-access waitlist from the marketing site. Still early alpha — expect rough edges while we iterate.",
     bullets: [
