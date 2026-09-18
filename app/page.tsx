@@ -83,14 +83,70 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Early-access trust line — honest, no fake social proof */}
-      <section className="border-b border-border bg-accent-soft/60" aria-label="Early access status">
-        <div className="mx-auto max-w-6xl px-4 py-4 sm:px-6">
-          <p className="text-center text-sm text-foreground/80">
-            <span className="font-medium text-foreground">Early alpha.</span> Limited invites for
-            iron-distance athletes while we harden the morning brief and planning loop. No fake
-            athlete counts — just careful shipping.
+      {/* Credibility strip — honest early-alpha; no fake testimonials or counts */}
+      <section
+        className="border-b border-border bg-card"
+        aria-labelledby="home-credibility-heading"
+      >
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <p className="text-sm font-medium text-accent">Built in the open</p>
+          <h2
+            id="home-credibility-heading"
+            className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl"
+          >
+            Credibility without the theater
+          </h2>
+          <p className="mt-3 max-w-2xl text-muted">
+            No fabricated testimonials or invented athlete counts. Here&apos;s what TriOS actually
+            stands on today — early alpha, iron-first, and athlete approval on plan changes.
           </p>
+
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl border border-border bg-background p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wide text-accent">Status</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">Early alpha + waitlist</h3>
+              <p className="mt-2 text-sm text-muted">
+                We&apos;re shipping carefully for iron-distance athletes. Join the waitlist for
+                updates — free signup, no payment collected here.
+              </p>
+              <Link
+                href="/early-access"
+                className="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accent-hover"
+              >
+                Join waitlist →
+              </Link>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-background p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wide text-accent">Focus</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">Iron-distance / 140.6 first</h3>
+              <p className="mt-2 text-sm text-muted">
+                Morning brief clarity for long-course training — what today, why it matters, and
+                what changed — before we broaden the audience.
+              </p>
+              <Link
+                href="/faq"
+                className="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accent-hover"
+              >
+                Read the FAQ →
+              </Link>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-background p-5 shadow-sm">
+              <p className="text-xs font-semibold uppercase tracking-wide text-accent">Control</p>
+              <h3 className="mt-2 text-base font-semibold text-foreground">You approve plan changes</h3>
+              <p className="mt-2 text-sm text-muted">
+                Suggested schedule changes stay proposals until you approve them. TriOS does not
+                silently rewrite your calendar.
+              </p>
+              <Link
+                href="/faq"
+                className="mt-4 inline-flex text-sm font-semibold text-accent hover:text-accent-hover"
+              >
+                How approvals work →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
