@@ -15,6 +15,37 @@ type ChangelogEntry = {
 
 const entries: ChangelogEntry[] = [
   {
+    date: "2026-09-26",
+    title: "App: calendar views, clearer numbers, Log, Body, and account recovery",
+    body: "A batch of early-alpha app updates. Still alpha — expect rough edges while we iterate.",
+    bullets: [
+      "Plan now has a navigable weekly calendar: step to the previous or next week, select each session on a day independently, and instructions start collapsed",
+      "Plan adds Day, Week, and Month views with previous/next, running through race week",
+      "Tap ? next to numbers for plain-language explanations — on Brief (training load, season phase, weather, strain) and in workout details",
+      "The Load and form chart is labeled Fitness, Fatigue, and Form with distinct lines and a short how-to-read note; jargon moved into the hints",
+      "Password reset and account recovery for email/password accounts; a successful reset signs out existing sessions",
+      "Searchable Log: search, filter, and sort workouts; planned-vs-actual shows only for confirmed matches, and unmatched or duplicate records stay visible and labeled",
+      "Add an optional start time when creating or editing a workout manually",
+      "Clearer Body recovery overview: seven-day coverage, latest readings by date, 28-day trends by source, and guidance when data is sparse",
+      "Deleting your account now removes your private uploaded documents, and new uploads are blocked once deletion starts",
+      "Health evidence CSV export now includes only confirmed rows",
+    ],
+    tag: "Alpha",
+  },
+  {
+    date: "2026-09-18",
+    title: "App: athlete-correctness fixes",
+    body: "Fixes aimed at guidance you can trust. Early alpha — nothing here changes your plan without your approval.",
+    bullets: [
+      "Plan-gap repair: if weeks before your race block are uncovered, Plan offers a reviewed \u201cStart training now\u201d proposal; your calendar stays unchanged unless you accept",
+      "Completed activities are matched to the right planned session (including two-a-days and bricks); ambiguous matches stay unmatched until you confirm",
+      "Brief no longer says recovery is \u201cin range\u201d or shows a readiness score without data; stale readings show their date and source",
+      "Race and Fuel no longer calculate splits or macro targets from missing or zero thresholds or body mass, and show which input to set",
+      "Desktop layout fixes: no more content running off the right edge, and the header no longer covers the sidebar",
+    ],
+    tag: "Alpha",
+  },
+  {
     date: "2026-09-18",
     title: "FAQ, credibility, Support, and How it works",
     body: "More complete early-alpha marketing IA — still honest, still no fake metrics. Brand TriOS only.",
