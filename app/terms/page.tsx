@@ -1,99 +1,111 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PrivacyContact from "@/components/PrivacyContact";
+import { GOVERNING_LAW_JURISDICTION, MINIMUM_AGE, OPERATING_ENTITY } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Terms",
-  description: "Terms of use for the TriOS marketing site and early-alpha app.",
+  description: "Terms of use for the TriOS website, waitlist, and early-access app.",
 };
 
 const linkClass = "font-medium text-accent hover:text-accent-hover";
+const h2Class = "text-lg font-semibold text-foreground";
 
 export default function TermsPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
       <p className="text-sm font-medium text-accent">Legal</p>
       <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Terms of use</h1>
-      <p className="mt-2 text-sm text-muted">Last updated: September 26, 2026 · Early alpha</p>
+      <p className="mt-2 text-sm text-muted">Last updated: September 27, 2026</p>
 
       <div className="mt-8 space-y-5 text-sm text-muted">
         <p>
-          These terms cover your use of the TriOS marketing site, the early-access waitlist, and
-          the early-alpha TriOS app. They are written in plain language. By using TriOS, you agree
-          to them. The{" "}
+          These Terms of Use govern your use of the TriOS website, early-access waitlist, and app,
+          operated by {OPERATING_ENTITY} (&quot;TriOS,&quot; &quot;we,&quot; &quot;us&quot;). By
+          using TriOS, you agree to these terms. Our{" "}
           <Link href="/privacy" className={linkClass}>
-            Privacy
+            Privacy policy
           </Link>{" "}
-          page explains what data we store and who processes it.
+          explains how we handle personal information.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Early-alpha software</h2>
+        <h2 className={h2Class}>Eligibility</h2>
         <p>
-          TriOS is in early alpha and is provided as-is. Features may change, break, or be removed
-          without notice, and access may be limited or ended. The app currently runs at a temporary
-          staging address until we set up a production domain. Keep your own copy of anything
-          important. Settings includes an account export for this.
+          You must be at least {MINIMUM_AGE} years old to use TriOS or join the waitlist.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Waitlist and pricing</h2>
+        <h2 className={h2Class}>Early-access service</h2>
         <p>
-          Joining the waitlist is free and is not a purchase. It does not guarantee access by any
-          particular date. TriOS has no paid plans or checkout today.
+          TriOS is early-access software. Features may change, be interrupted, or be removed, and
+          access may be limited or ended at any time. Joining the waitlist is free and does not
+          guarantee access.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Not medical advice</h2>
+        <h2 className={h2Class}>Not medical advice</h2>
         <p>
-          Training plans, daily briefs, readiness scores, fueling targets, and Coach replies are
-          for general information only. They are not medical advice, diagnosis, or treatment. TriOS
-          does not interpret lab results clinically. You are responsible for your own health,
-          training, and race decisions. Talk to a qualified professional before making changes
-          that could affect your health, and stop exercising and get appropriate care if you have
-          warning symptoms.
+          TriOS provides training information for general purposes only. It is not medical advice,
+          diagnosis, or treatment. You are responsible for your own health, training, and race
+          decisions. Consult a qualified professional before making changes that could affect your
+          health.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">AI features</h2>
+        <h2 className={h2Class}>AI features</h2>
         <p>
-          Coach and AI document review use an AI model from xAI. AI output can be incomplete or
-          wrong. Values extracted from documents stay unreviewed until you check and save them. You
-          are responsible for confirming anything you rely on. The Privacy page describes what data
-          these features send.
+          Some features use automated and AI processing. AI output can be wrong or incomplete.
+          Review any output before relying on it.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Integrations</h2>
+        <h2 className={h2Class}>Integrations</h2>
+        <p>Garmin, Strava, and Apple Health integrations are not yet available.</p>
+
+        <h2 className={h2Class}>Your account</h2>
         <p>
-          Direct Garmin, Strava, and Apple Health connections are not yet available. File import
-          is the supported way to bring in data today. We do not promise that any particular
-          integration will ship.
+          You are responsible for keeping your sign-in details secure and for activity under your
+          account. If you use an email and password, you can reset your password by email. You can
+          export or delete your account from the app&apos;s Settings.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Your account and content</h2>
+        <h2 className={h2Class}>Your content</h2>
         <p>
-          Keep your sign-in details secure and tell us about any unauthorized use once a contact
-          channel is available. Email/password accounts can reset their password by email. You keep
-          ownership of the data you enter or upload. You let us store and process it only to run
-          the TriOS features you use, as described on the Privacy page. You can export or
-          permanently delete your account from app Settings at any time.
+          You keep ownership of the content you submit. You grant us permission to store and
+          process it only as needed to provide the service to you, as described in our Privacy
+          policy.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Acceptable use</h2>
+        <h2 className={h2Class}>Acceptable use</h2>
         <p>
-          Do not misuse TriOS. That includes trying to access other people&apos;s accounts or data,
-          interfering with or overloading the service, uploading content you have no right to
-          share, or using TriOS in ways that harm other athletes or break applicable law.
+          Do not misuse TriOS. That includes trying to access accounts or data without
+          authorization, interfering with the service, uploading content you have no right to
+          share, or using TriOS in violation of applicable law.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Changes to these terms</h2>
+        <h2 className={h2Class}>Disclaimers and limitation of liability</h2>
         <p>
-          We will update these terms as TriOS moves beyond early alpha and will change the
-          &quot;Last updated&quot; date above when we do.
+          TriOS is provided &quot;as is&quot; and &quot;as available,&quot; without warranties of
+          any kind, to the extent permitted by law. To the extent permitted by law, TriOS is not
+          liable for indirect, incidental, or consequential damages arising from your use of the
+          service.
         </p>
 
-        <h2 className="text-lg font-semibold text-foreground">Contact</h2>
+        <h2 className={h2Class}>Termination</h2>
         <p>
-          The{" "}
-          <Link href="/support" className={linkClass}>
-            Support
-          </Link>{" "}
-          page lists the current contact options. A monitored contact address is not live yet.
+          You may stop using TriOS and delete your account at any time. We may suspend or end
+          access if these terms are violated or if the service is discontinued.
+        </p>
+
+        <h2 className={h2Class}>Governing law</h2>
+        <p>These terms are governed by the laws of {GOVERNING_LAW_JURISDICTION}.</p>
+
+        <h2 className={h2Class}>Changes to these terms</h2>
+        <p>
+          We may update these terms from time to time. When we do, we will change the &quot;Last
+          updated&quot; date above. Continuing to use TriOS after a change means you accept the
+          updated terms.
+        </p>
+
+        <h2 className={h2Class}>Contact</h2>
+        <p>
+          Questions about these terms: <PrivacyContact />
         </p>
       </div>
     </div>
