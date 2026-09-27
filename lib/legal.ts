@@ -5,7 +5,7 @@
  * once a custom domain is verified and a monitored privacy inbox exists. The
  * jurisdiction and operating entity are placeholders pending owner decision.
  */
-export const PRIVACY_CONTACT_EMAIL = "privacy@trios.training";
+export const PRIVACY_CONTACT_EMAIL = "privacy@<site-domain>";
 
 /** True while the contact email above is a placeholder, not a monitored inbox. */
 export const PRIVACY_CONTACT_IS_PLACEHOLDER = true;
