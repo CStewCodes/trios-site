@@ -62,11 +62,11 @@ const features = [
   },
   {
     title: "Notifications",
-    status: "In the app",
+    status: "Rolling out",
     body: "Only the notices worth interrupting you for, on the channels you choose. Nothing nags you about every sync or every screen.",
     points: [
       "Plan changes waiting for your approval, and group workouts that move or get cancelled",
-      "Push and email, set per notice type — turn each one on or off",
+      "Choose per notice type, with each one on or off — in the app and by email, with push notifications on the way",
       "Quiet hours so nothing arrives while you sleep",
     ],
   },
