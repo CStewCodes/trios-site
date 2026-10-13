@@ -61,6 +61,16 @@ const features = [
     ],
   },
   {
+    title: "Notifications",
+    status: "Rolling out",
+    body: "Only the notices worth interrupting you for, on the channels you choose. Nothing nags you about every sync or every screen.",
+    points: [
+      "Plan changes waiting for your approval, and group workouts that move or get cancelled",
+      "Choose per notice type, with each one on or off — in the app and by email, with push notifications on the way",
+      "Quiet hours so nothing arrives while you sleep",
+    ],
+  },
+  {
     title: "Device & platform integrations",
     status: "Roadmap / planned",
     body: "Garmin, Strava, and Apple Health style connections are on the roadmap / planned — not claimed as live shipping integrations in this early alpha.",
