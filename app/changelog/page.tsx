@@ -22,7 +22,7 @@ const entries: ChangelogEntry[] = [
       "Private teams: invite teammates with expiring links, set a shared race goal, and schedule group workouts with RSVP (in, maybe, out) and a team month calendar",
       "Group workouts can be edited, moved, copied to another day, or cancelled, and can carry a planned GPX route with an elevation profile, weather at the start, and a wet-road warning",
       "Crew moments: high-fives, a notes board, opt-in awards, and a weekly highlights summary",
-      "Notices: choose per type what you hear about, in the app and by email; iPhone push delivery for group workout notices is in early alpha",
+      "Notices: choose per type what you hear about, in the app and by email, with push notifications on the way",
       "Move or swap today\u2019s workout, shorten or skip a future workout with a plain explanation of the change, and undo the last move after a reload",
       "Fuel: a pantry for products and recipes, a session fuel card on Brief, and homemade fuel as a recipe with batch size and serving size",
       "Download a planned workout as a FIT file to load onto a Garmin watch yourself; this is a file download, not a live Garmin sync",
