@@ -15,6 +15,26 @@ type ChangelogEntry = {
 
 const entries: ChangelogEntry[] = [
   {
+    date: "2026-10-14",
+    title: "App: private teams, group workouts, notifications, and plain-language help",
+    body: "A larger batch of early-alpha app updates since the last entry. Still alpha — expect rough edges while we iterate.",
+    bullets: [
+      "Private teams: invite teammates with expiring links, set a shared race goal, and schedule group workouts with RSVP (in, maybe, out) and a team month calendar",
+      "Group workouts can be edited, moved, copied to another day, or cancelled, and can carry a planned GPX route with an elevation profile, weather at the start, and a wet-road warning",
+      "Crew moments: high-fives, a notes board, opt-in awards, and a weekly highlights summary",
+      "Notices: choose per type what you hear about, in the app and by email, with push notifications on the way",
+      "Move or swap today\u2019s workout, shorten or skip a future workout with a plain explanation of the change, and undo the last move after a reload",
+      "Fuel: a pantry for products and recipes, a session fuel card on Brief, and homemade fuel as a recipe with batch size and serving size",
+      "Download a planned workout as a FIT file to load onto a Garmin watch yourself; this is a file download, not a live Garmin sync",
+      "Threshold numbers explained — what each is, why it matters, and how to find yours — with calculators, plus plain-language notes on recovery and the performance chart",
+      "Workouts have plain names instead of template numbers, and you can set your own start time and indoor/outdoor setting directly",
+      "Coach now runs through a signed-in server with usage limits, and your Coach conversations are saved to your account",
+      "Account safety: export and delete stay reachable before onboarding, an abandoned upload no longer blocks deletion, and new accounts start with nothing borrowed from the demo athlete",
+      "Renamed to TriOS in the app, with a new icon set",
+    ],
+    tag: "Alpha",
+  },
+  {
     date: "2026-09-26",
     title: "App: calendar views, clearer numbers, Log, Body, and account recovery",
     body: "A batch of early-alpha app updates. Still alpha — expect rough edges while we iterate.",
