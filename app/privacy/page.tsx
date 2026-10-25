@@ -37,7 +37,10 @@ export default function PrivacyPage() {
               Training information you give us
             </span>
             : your athlete profile, races, check-ins, planned and logged
-            workouts, and notes.
+            workouts, and notes. This includes whether you have a bike,
+            where you can swim, and how you want to approach spending on gear.
+            Coach uses these answers so it does not suggest gear or sessions
+            you cannot use.
           </li>
           <li>
             <span className="font-medium text-foreground">
